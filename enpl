@@ -1,0 +1,25 @@
+#!/bin/bash
+
+## Uncomment to change display language to english
+# LANGUAGE=en
+
+clear
+if [ "$LANGUAGE" = "en" ]; then
+    printf "q - exit\n"
+else
+    printf "q - wyjście\n"
+fi
+
+while :; do
+    if [ "$LANGUAGE" = "en" ]; then
+        printf "\nTranslate en->pl: "
+    else
+        printf "\nTłumacz en->pl: "
+    fi
+
+    read word
+    if [ "$word" = "q" ]; then
+        exit 0
+    fi
+    links -dump http://megaslownik.pl/slownik/angielsko_polski/$word | grep "   >> "
+done
