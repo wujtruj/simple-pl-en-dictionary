@@ -3,6 +3,11 @@ simple-pl-en-dictionary
 
 Simple command line polish-english and english-polish dictionary
 
+Preview:
+--------
+
+![Preview](https://raw.github.com/wujtruj/simple-pl-en-dictionary/master/preview.png)
+
 Automatic set up:
 -----------------
 

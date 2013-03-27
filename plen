@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Uncomment to change display language to english
-# LANGUAGE=en
+LANGUAGE=en
 
 clear
 if [ "$LANGUAGE" = "en" ]; then
@@ -21,5 +21,5 @@ while :; do
     if [ "$word" = "q" ]; then
         exit 0
     fi
-    links -dump http://megaslownik.pl/slownik/polsko_angielski/$word | grep "\[IMG\]>>" | sed -e 's/\[IMG\]//'
+    links -dump http://megaslownik.pl/slownik/polsko_angielski/$word | grep "\[IMG\]>>" | sed -e 's/\[IMG\]//' | grep --color=auto ">>"
 done
